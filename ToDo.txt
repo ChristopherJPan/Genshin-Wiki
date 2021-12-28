@@ -1,0 +1,25 @@
+Stuff to do-
+auto signout feature
+image carousel
+drop down bar
+account - oauth
+timeline - Paimon moe
+
+
+sass
+react
+graphql / apollo
+react router???
+redux
+react hook 
+express
+node
+typescript
+
+jest/ enzyme/ supertest TESTING!!!!
+material ui
+webpack
+
+docker
+electron
+
