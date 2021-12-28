@@ -8,8 +8,12 @@ timeline - Paimon moe
 
 sass
 react
-graphql / apollo
 react router???
+
+graphql / 
+
+apollo
+
 redux
 react hook 
 express
