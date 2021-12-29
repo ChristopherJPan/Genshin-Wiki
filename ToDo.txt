@@ -27,3 +27,6 @@ webpack
 docker
 electron
 
+"like google search bar, when u type stuff in, it will show a list of things you could be looking for
+so have like a data bank of words that could be what the typer is referring to
+and have it search options in the databank when u start typing"
