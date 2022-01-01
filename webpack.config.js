@@ -47,75 +47,125 @@
 //   },
 // };
 
+
+
+
+
+// const path = require("path");
+// const HtmlWebpackPlugin = require("html-webpack-plugin");
+// module.exports = {
+//   // entry: './src/index.js',
+//   entry: {
+//     // login: "./src/login.js",
+//     WifuPage: "./src/index.js",
+//   },
+//   mode: "development",
+//   mode: process.env.NODE_ENV,
+//   output: {
+//     path: path.resolve(__dirname, "dist"),
+//     filename: "[name].bundle.js",
+//     publicPath: "/",
+//   },
+//   // output: {
+//   //   path: path.resolve(__dirname, 'dist'),
+//   //   filename: 'bundle.js',
+//   //   publicPath: '/',
+//   // },
+
+//   devServer: {
+//     static: {
+//       directory: path.resolve(__dirname, "dist"),
+//       publicPath: "/",
+//       // ??????????
+//     },
+//     compress: true,
+//     headers: { "Access-Control-Allow-Origin": "*" },
+//     hot: true,
+//     historyApiFallback: true,
+//     host: "localhost",
+//     port: 8080,
+//     proxy: {
+//       '/**': {
+//         target: 'http://localhost:3000',
+//         secure: false,
+//         changeOrigin: false,
+//       },
+//       // "/sendWifuData": {
+//       //   target: "http://localhost:3000",
+//       // },
+//       // "/server/**": {
+//       //   target: "http://localhost:3000/",
+//       //   secure: false,
+//       // },
+//     },
+//   },
+//   module: {
+//     rules: [
+//       {
+//         test: /\.(js|jsx)$/,
+//         exclude: /node_modules/,
+//         use: {
+//           loader: "babel-loader",
+//           options: {
+//             presets: ["@babel/env", "@babel/react"],
+//           },
+//         },
+//       },
+//       {
+//         test: /.(css|scss)$/i,
+//         exclude: /node_modules/,
+//         use: ["style-loader", "css-loader", "sass-loader"],
+//       },
+//     ],
+//   },
+//   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+//   resolve: {
+//     extensions: [".js", ".jsx"],
+//   },
+// };
+
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  // entry: './src/index.js',
-  entry: {
-    // login: "./src/login.js",
-    WifuPage: "./src/index.js",
-  },
-  mode: "development",
   mode: process.env.NODE_ENV,
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].bundle.js",
-    publicPath: "/",
+    path: path.resolve(__dirname, "public"),
+    filename: "bundle.js",
   },
-  // output: {
-  //   path: path.resolve(__dirname, 'dist'),
-  //   filename: 'bundle.js',
-  //   publicPath: '/',
-  // },
-
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, "dist"),
-      publicPath: "/",
-      // ??????????
-    },
-    compress: true,
-    headers: { "Access-Control-Allow-Origin": "*" },
-    hot: true,
-    historyApiFallback: true,
-    host: "localhost",
-    port: 8080,
-    proxy: {
-      '/**': {
-        target: 'http://localhost:3000',
-        secure: false,
-        changeOrigin: false,
-      },
-      // "/sendWifuData": {
-      //   target: "http://localhost:3000",
-      // },
-      // "/server/**": {
-      //   target: "http://localhost:3000/",
-      //   secure: false,
-      // },
-    },
-  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/env", "@babel/react"],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
       {
-        test: /.(css|scss)$/i,
-        exclude: /node_modules/,
+        test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  devServer: {
+    static: {
+      publicPath: "/public",
+    },
+    proxy: {
+      "/api/**": "http://localhost:3000/",
+    },
+  },
   resolve: {
     extensions: [".js", ".jsx"],
   },
