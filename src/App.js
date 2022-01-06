@@ -19,7 +19,7 @@ class App extends Component {
 
     return (
       <div>
-        HELLOO!!! asdfasdf adfa
+        HELLOO!!! 
       </div>
     );
   }
