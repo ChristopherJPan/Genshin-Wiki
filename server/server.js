@@ -17,7 +17,7 @@ app.get("/*", (req, res) => {
     .status(200)
     .sendFile(path.resolve(__dirname, "../public/index.html"));
 });
-
+//status
 
 app.use('/', (req, res) => {
   return res.status(404).json('404 Not found');
