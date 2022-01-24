@@ -1,0 +1,38 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.UnitTable {
+  float: right;
+  border: 0.1em solid rgba(0, 0, 0, 0);
+  border-radius: 0.5em;
+  box-shadow: 0 0.2em 0.3em 0.1em rgba(0, 0, 0, 0.1);
+}
+
+.normal {
+}
+.high {
+  background: #ff5050;
+}
+.low {
+  background: #0066ff;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
