@@ -12,6 +12,7 @@ const App = (props) => {
   return (
     <div>
       <nav>
+        
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/characters">CharactersPage</Link></li>
