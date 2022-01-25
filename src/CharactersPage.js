@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 const CharactersPage = (props) => {
   return (
     <div>
-      <p>helloo!!!!!!!!!!!!!!</p>
+      <p>chracters</p>
     </div>
   );
 };

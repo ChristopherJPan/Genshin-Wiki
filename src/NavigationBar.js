@@ -1,28 +1,20 @@
 import React, { Component } from "react";
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Switch, Link } from "react-router-dom";
 
 
 const NavigationBar = (props) => {
   return (
     <div>
-      <p>helloo!!!!!!!!!!!!!!</p>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/characters">CharactersPage</Link></li>
+        </ul>
+      </nav>
     </div>
+   
   );
 };
 
-// class App extends Component {
-//   constructor(props) {
-//     super(props);
-//   }
-
-//   render() {
-
-//     return (
-//       <div>
-//         HELLOO!!! tttttttttttttgf
-//       </div>
-//     );
-//   }
-// }
 
 export default NavigationBar;

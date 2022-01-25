@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 const Home = (props) => {
   return (
     <div>
-      <p>helloo!!!!!!!!!!!sadgf!!!</p>
+      <p>homeee</p>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter,
   Routes,
   Route,
   Link
@@ -11,14 +10,20 @@ import CharactersPage from './CharactersPage.js';
 
 const App = (props) => {
   return (
-    <Routes>
-      <div>
-        <nav>
-          <Link to="/home">Home</Link>
-          <Link to="/characters">CharactersPage</Link>
-        </nav>
-      </div>
-    </Routes>
+    <div>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/characters">CharactersPage</Link></li>
+        </ul>
+      </nav>
+
+      <Routes>
+        {/* <Routes path="/" element={<NavigationBar />}/> */}
+          <Route index element={<Home />} />
+          <Route path="characters" element={<CharactersPage />} />
+      </Routes>
+    </div>
   );
 }
 
