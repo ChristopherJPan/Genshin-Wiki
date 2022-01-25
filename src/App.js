@@ -11,6 +11,7 @@ import CharactersPage from './CharactersPage.js';
 const App = (props) => {
   return (
     <div>
+      
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
