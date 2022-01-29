@@ -1,29 +1,25 @@
 import React, { Component, useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-const CharacterLink = (props) => {
-  // const [characters, setCharacters] = useState([]);
+const CharacterPage = (props) => {
+  // const [name, setName] = useState(null);
+  // const params = useParams();
 
-  // useEffect(async () => {
-  //   /*
-
-  //   */
-
-  //   fetch("https://api.genshin.dev/characters")
+  // useEffect(() => {
+  //   fetch(`http://localhost:8081/characterpage/${params.name}`)
   //     .then((response) => response.json())
-  //     .then((data) => setCharacters(data))
-  //     .then((res) => console.log("characters:", characters));
+  //     .then((data) => setName(data));
   // }, []);
-  // // useEffect(() => { }, [characters]);
+  // // // useEffect(() => { }, [characters]);
 
   return (
     <div>
       {/* character name, route to character page, picture eventually, fetch
       specific character information, display character information */}
-      {props.char}
-      <link></link>
+      hello!!!!!!!!!!!
+
     </div>
   );
 };
 
-export default CharacterLink;
+export default CharacterPage;

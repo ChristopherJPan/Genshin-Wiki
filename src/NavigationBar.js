@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Routes, Route, Switch, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 export default function NavigationBar(props) {
   return (
@@ -9,7 +9,7 @@ export default function NavigationBar(props) {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/characters">CharactersPage</Link>
+          <Link to="/characterslist">CharactersList</Link>
         </li>
       </ul>
     </div>
