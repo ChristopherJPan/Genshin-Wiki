@@ -159,6 +159,7 @@ module.exports = {
     ],
   },
   devServer: {
+    historyApiFallback: true,
     static: {
       publicPath: "/public",
     },

@@ -11,18 +11,12 @@ import CharactersPage from './CharactersPage.js';
 const App = (props) => {
   return (
     <div>
-      
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/characters">CharactersPage</Link></li>
-        </ul>
-      </nav>
-
+      <NavigationBar/>
       <Routes>
         {/* <Routes path="/" element={<NavigationBar />}/> */}
-          <Route index element={<Home />} />
-          <Route path="characters" element={<CharactersPage />} />
+        <Route index element={<Home />} />
+        <Route path="characters" element={<CharactersPage />} />
+        {/* <Route path="*" element={<ErrorPaage />}/> */}
       </Routes>
     </div>
   );
